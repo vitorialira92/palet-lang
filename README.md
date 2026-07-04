@@ -1,4 +1,5 @@
 # PaletLang
+<img width="3507" height="2480" alt="banner-img" src="https://github.com/user-attachments/assets/3015a5fd-2aee-4465-af11-aa5a91288708" />
 
 > Escreva seu sistema de design uma única vez, em uma sintaxe legível por humanos, e gere automaticamente vários artefatos a partir dele: um guia de estilo em HTML, um arquivo de design tokens em CSS e uma configuração de tema para Tailwind CSS.
 
