@@ -1,0 +1,11 @@
+// SEMANTIC ERROR: `primry` is not one of the valid semantic roles.
+// Este caso parseia normalmente (role é apenas um identificador na gramática),
+// mas é rejeitado na análise semântica com a sugestão "did you mean 'primary'?".
+
+meta { name: "Typo System" }
+
+palette {
+    primary    #3366FF role: primry
+    background #FFFFFF role: background
+    text       #111111 role: text
+}

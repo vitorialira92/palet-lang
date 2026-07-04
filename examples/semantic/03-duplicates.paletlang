@@ -1,0 +1,22 @@
+// ERROS SEMÂNTICOS: nomes duplicados que a gramática aceita, mas a análise semântica rejeita.
+//   - color `primary` declarada duas vezes
+//   - token de espaçamento `md`  declarada duas vezes
+//   - component `card` declarado duas vezes
+
+meta { name: "Duplicates" }
+
+palette {
+    primary    #3366FF role: primary
+    primary    #FF0000 role: accent
+    background #FFFFFF role: background
+    text       #111111 role: text
+}
+
+spacing {
+    base 8
+    token md 2
+    token md 4
+}
+
+component card { background: primary padding: md }
+component card { background: primary padding: md }

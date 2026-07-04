@@ -1,0 +1,46 @@
+// 02-typography-spacing.paletlang
+// Adiciona tipografia (fontes + escala tipográfica) e uma escala de espaçamento
+// sobre a paleta. Exercita os blocos de tipografia e espaçamento, além de
+// números decimais
+
+meta {
+    name: "Editorial System"
+    version: "0.3.0"
+    author: "Liraz"
+    language: "pt-BR"
+}
+
+palette {
+    primary    #1A1A2E role: primary
+    accent     #E94560 role: accent
+    background #FFFFFF role: background
+    surface    #F5F5F5 role: surface
+    text       #16213E role: text
+    muted      #7A7A8C role: muted
+}
+
+typography {
+    font body    "Inter"   weight: 400
+    font heading "Poppins" weight: 700
+
+    scale {
+        sm   14 lineHeight: 1.4
+        base 16 lineHeight: 1.5
+        lg   20 lineHeight: 1.4
+        xl   28 lineHeight: 1.2
+    }
+}
+
+spacing {
+    base 8
+    token xs 0.5
+    token sm 1
+    token md 2
+    token lg 4
+    token xl 8
+}
+
+output {
+    html { file: "editorial.html" }
+    css  { file: "tokens.css" prefix: "--pl-" }
+}

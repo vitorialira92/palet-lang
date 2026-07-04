@@ -1,0 +1,83 @@
+/*
+ * 03-full-system.paletlang
+ * Um design system completo que exercita todos os blocos, componentes que
+ * referenciam tokens declarados e os três formatos de saída (HTML, Tailwind, CSS)
+ */
+
+meta {
+    name: "Aurora Design System"
+    version: "1.0.0"
+    author: "Vitória Tenório"
+    language: "pt-BR"
+}
+
+palette {
+    primary    #4F46E5 role: primary
+    secondary  #06B6D4 role: secondary
+    accent     #F59E0B role: accent
+    background #FFFFFF role: background
+    surface    #F8FAFC role: surface
+    text       #0F172A role: text
+    muted      #64748B role: muted
+    border     #E2E8F0 role: border
+    success    #16A34A role: success
+    warning    #D97706 role: warning
+    error      #DC2626 role: error
+}
+
+typography {
+    font body    "Inter"          weight: 400
+    font heading "Space Grotesk"  weight: 600
+    font mono    "JetBrains Mono"
+
+    scale {
+        xs   12 lineHeight: 1.4
+        sm   14 lineHeight: 1.45
+        base 16 lineHeight: 1.5
+        lg   20 lineHeight: 1.4
+        xl   24 lineHeight: 1.3
+        xxl  32 lineHeight: 1.2
+    }
+}
+
+spacing {
+    base 4
+    token xs  1
+    token sm  2
+    token md  4
+    token lg  6
+    token xl  8
+    token xxl 12
+}
+
+component button {
+    background: primary
+    foreground: background
+    font:       body
+    padding:    md
+    radius:     sm
+}
+
+component card {
+    background: surface
+    foreground: text
+    border:     border
+    font:       body
+    padding:    lg
+    radius:     md
+    gap:        sm
+}
+
+component alert {
+    background: error
+    foreground: background
+    font:       body
+    padding:    md
+    radius:     sm
+}
+
+output {
+    html     { file: "aurora.html" }
+    tailwind { file: "tailwind.config.js" format: js markup: true }
+    css      { file: "aurora-tokens.css" prefix: "--aurora-" }
+}

@@ -1,0 +1,64 @@
+// Identidade vibrante e divertida. Neste exemplo, o bloco `output` gera apenas
+// os tokens em CSS e a configuração do Tailwind (formato `cjs`), sem incluir o
+// guia HTML
+//
+// Isso demonstra que os alvos de saída são opcionais e podem ser combinados
+
+meta {
+    name: "Pop"
+    version: "1.0.0"
+    description: "Uma identidade vibrante e divertida, gerando apenas tokens, sem guia HTML."
+}
+
+palette {
+    grape  #7C3AED role: primary
+    bubble #EC4899 role: accent
+    sky    #0EA5E9 role: secondary
+    cloud  #FFFFFF role: background
+    slate  #1E1B4B role: text
+    mist   #6B7280 role: muted
+    fog    #E5E7EB role: border
+    lime   #65A30D role: success
+}
+
+typography {
+    font body    "Nunito"  weight: 400
+    font display "Baloo 2" weight: 700
+
+    scale {
+        sm   14 lineHeight: 1.5
+        base 16 lineHeight: 1.6
+        lg   22 lineHeight: 1.3
+        xl   32 lineHeight: 1.15
+    }
+}
+
+spacing {
+    base 4
+    token xs 1
+    token sm 2
+    token md 4
+    token lg 8
+}
+
+component button {
+    background: grape
+    foreground: cloud
+    font:       display
+    padding:    md
+    radius:     lg
+}
+
+component chip {
+    background: fog
+    foreground: slate
+    border:     bubble
+    font:       body
+    padding:    xs
+    radius:     lg
+}
+
+output {
+    css      { file: "pop-tokens.css" prefix: "--pop-" }
+    tailwind { file: "tailwind.config.cjs" format: cjs markup: false }
+}

@@ -1,0 +1,21 @@
+// 03-malformed-entries.paletlang
+// ERROS DE SINTAXE: várias entradas estão incompletas ou malformadas.
+// - o valor de uma entrada de meta deve ser uma STRING, não um identificador cru
+// - uma propriedade de componente está sem o separador ':'
+// - uma opção de output está sem valor
+
+meta {
+    name: MinhaPaleta            // <- erro: o valor deve ser uma string entre aspas
+}
+
+palette {
+    primary #3366FF role: primary
+}
+
+component button {
+    background primary           // <- erro: faltando ':' entre chave e valor
+}
+
+output {
+    html { file: }               // <- erro: valor da opção está ausente
+}

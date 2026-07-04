@@ -1,0 +1,19 @@
+// ERROS/AVISOS SEMÂNTICOS no bloco de output:
+//   - `htlm` -> unknown target (hint: html)
+//   - `markup: 3` -> markup must be a boolean (error)
+//   - `prefx` -> unknown css option (warning, hint: prefix)
+
+meta { name: "Bad Output" }
+
+palette {
+    primary    #3366FF role: primary
+    background #FFFFFF role: background
+    text       #111111 role: text
+}
+
+output {
+    html     { file: "ok.html" }
+    htlm     { file: "typo.html" }
+    tailwind { file: "tw.js" markup: 3 }
+    css      { file: "tokens.css" prefx: "--x-" }
+}

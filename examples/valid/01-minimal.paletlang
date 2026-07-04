@@ -1,0 +1,19 @@
+// 01-minimal.paletlang
+// Um programa PaletLang pequeno: alguns metadados e algumas cores
+// com um único target de saída HTML
+// Bom como teste inicial de parsing e análise semântica
+
+meta {
+    name: "Minimal System"
+    version: "0.1.0"
+}
+
+palette {
+    primary    #3366FF role: primary
+    background #FFFFFF role: background
+    text       #111111 role: text
+}
+
+output {
+    html { file: "minimal.html" }
+}

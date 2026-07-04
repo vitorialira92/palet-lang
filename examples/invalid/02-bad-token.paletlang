@@ -1,0 +1,16 @@
+// 02-bad-token.paletlang
+// ERRO LÉXICO/SINTÁTICO: `#12XZ` não é uma cor hexadecimal válida (X e Z não são dígitos hex).
+// Além disso, `1.5.2` não é um número válido.
+// Esses erros devem ser detectados pelo lexer/parser e não devem chegar à análise semântica.
+
+meta {
+    name: "Bad Tokens"
+}
+
+palette {
+    primary #12XZ role: primary
+}
+
+spacing {
+    base 1.5.2
+}

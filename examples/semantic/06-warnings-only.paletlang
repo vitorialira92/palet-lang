@@ -1,0 +1,27 @@
+// SÓ WARNINGS: este programa compila com sucesso (exit 0), mas o analisador
+// aponta alguns problemas de qualidade. Como não há erros, o guia HTML padrão
+// ainda é gerado.
+//   - `vibe` -> unknown meta key
+//   - role `primary` -> assigned to two colors
+//   - type scale -> has no `base` step
+//   - no `output` block -> a default HTML guide is generated
+
+meta {
+    name: "Warnings Only"
+    vibe: "calm"
+}
+
+palette {
+    primary    #4F46E5 role: primary
+    brand      #06B6D4 role: primary
+    background #FFFFFF role: background
+    text       #0F172A role: text
+}
+
+typography {
+    font body "Inter" weight: 400
+    scale {
+        sm 14 lineHeight: 1.4
+        lg 20 lineHeight: 1.4
+    }
+}

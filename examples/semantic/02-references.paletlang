@@ -1,0 +1,28 @@
+// ERROS SEMÂNTICOS: referências de componentes não resolvem para o tipo correto.
+// - `foreground: ghost` -> não existe uma cor chamada `ghost`
+// - `font: brand` -> `brand` é uma cor, não uma fonte
+// - `padding: brand` -> `brand` é uma cor, não um token de espaçamento
+
+meta { name: "Broken References" }
+
+palette {
+    brand      #3366FF role: primary
+    background #FFFFFF role: background
+    text       #111111 role: text
+}
+
+typography {
+    font body "Inter" weight: 400
+}
+
+spacing {
+    base 8
+    token md 2
+}
+
+component button {
+    background: brand
+    foreground: ghost
+    font:       brand
+    padding:    brand
+}

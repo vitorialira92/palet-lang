@@ -1,0 +1,78 @@
+// Sistema editorial para uma casa de moda: base de neutros quentes, vinho como
+// cor primária e dourado como destaque. Tipografia com fontes serifadas para
+// títulos e texto
+//
+// Cantos “flat” (token 0) reforçam a estética de revista impressa (estética editorial)
+
+meta {
+    name: "Maison Éditoriale"
+    version: "2.0.0"
+    author: "Atelier"
+    language: "fr"
+    description: "Un système éditorial sobre pour une maison de mode."
+}
+
+palette {
+    ink      #1A1714 role: text
+    paper    #FBF9F4 role: background
+    bordeaux #6E1423 role: primary
+    gilt     #B08D57 role: accent
+    linen    #F1ECE1 role: surface
+    ash      #857E74 role: muted
+    hairline #D9D2C5 role: border
+}
+
+typography {
+    font display "Playfair Display" weight: 700
+    font body    "EB Garamond"      weight: 400
+    font label   "Inter"            weight: 500
+
+    scale {
+        caption 13 lineHeight: 1.5
+        base    17 lineHeight: 1.7
+        lede    22 lineHeight: 1.5
+        title   40 lineHeight: 1.1
+        hero    64 lineHeight: 1.05
+    }
+}
+
+spacing {
+    base 8
+    token flat 0
+    token xs   0.5
+    token sm   1
+    token md   2
+    token lg   3
+    token xl   5
+}
+
+component button {
+    background: bordeaux
+    foreground: paper
+    font:       label
+    padding:    md
+    radius:     flat
+}
+
+component pullquote {
+    background: linen
+    foreground: ink
+    border:     hairline
+    font:       display
+    padding:    lg
+    radius:     flat
+    gap:        sm
+}
+
+component tag {
+    background: gilt
+    foreground: ink
+    font:       label
+    padding:    xs
+    radius:     xs
+}
+
+output {
+    html { file: "maison.html" }
+    css  { file: "maison-tokens.css" prefix: "--maison-" }
+}

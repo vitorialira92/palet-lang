@@ -1,0 +1,82 @@
+// Tema escuro. O guia de estilo em HTML se auto-tematiza automaticamente:
+// como o papel `background` é escuro e o `text` é claro, toda a página é
+// renderizada em modo escuro.
+//
+// Também testa a geração do Tailwind no formato `mjs`.
+
+meta {
+    name: "Midnight UI"
+    version: "0.9.0"
+    author: "Núcleo de Design"
+    language: "pt-BR"
+    description: "Um tema escuro para painéis e ferramentas internas."
+}
+
+palette {
+    iris     #818CF8 role: primary
+    cyan     #22D3EE role: accent
+    night    #0B0F19 role: background
+    panel    #151B2B role: surface
+    mist     #E5E7EB role: text
+    slate    #94A3B8 role: muted
+    divider  #263042 role: border
+    positive #34D399 role: success
+    caution  #FBBF24 role: warning
+    danger   #F87171 role: error
+}
+
+typography {
+    font body    "Inter"          weight: 400
+    font heading "Sora"           weight: 600
+    font mono    "JetBrains Mono"
+
+    scale {
+        xs   12 lineHeight: 1.5
+        sm   14 lineHeight: 1.5
+        base 16 lineHeight: 1.6
+        lg   20 lineHeight: 1.4
+        xl   28 lineHeight: 1.25
+    }
+}
+
+spacing {
+    base 4
+    token xs 1
+    token sm 2
+    token md 4
+    token lg 6
+    token xl 10
+}
+
+component button {
+    background: iris
+    foreground: night
+    font:       body
+    padding:    md
+    radius:     sm
+}
+
+component badge {
+    background: panel
+    foreground: mist
+    border:     divider
+    font:       mono
+    padding:    xs
+    radius:     xs
+}
+
+component alert {
+    background: panel
+    foreground: mist
+    border:     danger
+    font:       body
+    padding:    md
+    radius:     sm
+    gap:        sm
+}
+
+output {
+    html     { file: "midnight.html" }
+    css      { file: "midnight-tokens.css" prefix: "--mn-" }
+    tailwind { file: "tailwind.config.mjs" format: mjs markup: true }
+}

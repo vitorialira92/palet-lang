@@ -1,0 +1,131 @@
+// Exemplo mais completo
+//
+// Inclui uma paleta semântica completa (primária, secundária, destaque,
+// superfícies e estados), quatro famílias tipográficas, uma escala de oito
+// níveis, nove tokens de espaçamento e sete componentes
+//
+// Gera os três artefatos, com Tailwind em TypeScript (`format: ts`) e uma
+// pré-visualização em markup
+
+meta {
+    name: "Helios Product System"
+    version: "3.2.1"
+    author: "Helios Design Guild"
+    language: "en"
+    description: "The complete foundation for Helios web and mobile products, including color, type, spacing, and core components."
+    license: "MIT"
+}
+
+palette {
+    brand    #2563EB role: primary
+    brandAlt #7C3AED role: secondary
+    spark    #F97316 role: accent
+    canvas   #FFFFFF role: background
+    panel    #F8FAFC role: surface
+    ink      #0F172A role: text
+    subtle   #64748B role: muted
+    line     #E2E8F0 role: border
+    ok       #15803D role: success
+    warn     #B45309 role: warning
+    err      #B91C1C role: error
+    note     #0E7490 role: info
+}
+
+typography {
+    font body    "Inter"          weight: 400
+    font heading "Sora"           weight: 700
+    font mono    "JetBrains Mono" weight: 400
+    font numeric "IBM Plex Mono"  weight: 500
+
+    scale {
+        xs      12 lineHeight: 1.5
+        sm      14 lineHeight: 1.5
+        base    16 lineHeight: 1.6
+        md      18 lineHeight: 1.6
+        lg      22 lineHeight: 1.4
+        xl      28 lineHeight: 1.3
+        xxl     36 lineHeight: 1.2
+        display 56 lineHeight: 1.05
+    }
+}
+
+spacing {
+    base 4
+    token none 0
+    token xs   1
+    token sm   2
+    token md   4
+    token lg   6
+    token xl   8
+    token xxl  12
+    token huge 16
+}
+
+component button {
+    background: brand
+    foreground: canvas
+    font:       body
+    padding:    md
+    radius:     sm
+    gap:        xs
+}
+
+component buttonSecondary {
+    background: panel
+    foreground: ink
+    border:     line
+    font:       body
+    padding:    md
+    radius:     sm
+    gap:        xs
+}
+
+component card {
+    background: panel
+    foreground: ink
+    border:     line
+    font:       body
+    padding:    lg
+    radius:     md
+    gap:        sm
+}
+
+component input {
+    background: canvas
+    foreground: ink
+    border:     line
+    font:       body
+    padding:    sm
+    radius:     sm
+}
+
+component badge {
+    background: spark
+    foreground: ink
+    font:       body
+    padding:    xs
+    radius:     xl
+}
+
+component alertError {
+    background: err
+    foreground: canvas
+    font:       body
+    padding:    md
+    radius:     sm
+    gap:        sm
+}
+
+component codeBlock {
+    background: ink
+    foreground: panel
+    font:       mono
+    padding:    md
+    radius:     md
+}
+
+output {
+    html     { file: "helios.html" }
+    css      { file: "helios-tokens.css" prefix: "--helios-" }
+    tailwind { file: "tailwind.config.ts" format: ts markup: true }
+}

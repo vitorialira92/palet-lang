@@ -1,0 +1,16 @@
+// 01-missing-brace.paletlang
+// ERRO DE SINTAXE: o bloco de palette não é fechado com '}'.
+// O parser deve reportar ausência de '}' ou fim de arquivo inesperado.
+
+meta {
+    name: "Broken System"
+}
+
+palette {
+    primary    #3366FF role: primary
+    background #FFFFFF role: background
+// <- missing closing brace here
+
+output {
+    html { file: "out.html" }
+}

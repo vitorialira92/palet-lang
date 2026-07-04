@@ -1,0 +1,14 @@
+// ERRO SEMÂNTICO: a combinação de cor de texto e fundo não atinge o contraste WCAG AA (4.5:1).
+// Pares de texto/fundo ilegíveis são tratados como erro
+
+meta { name: "Low Contrast" }
+
+palette {
+    primary    #3366FF role: primary
+    background #999999 role: background
+    text       #888888 role: text
+}
+
+output {
+    html { file: "low-contrast.html" }
+}
