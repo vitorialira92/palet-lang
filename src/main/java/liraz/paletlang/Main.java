@@ -1,9 +1,9 @@
 package liraz.paletlang;
 
 import liraz.paletlang.PaletLangCompiler.Result;
-import liraz.paletlang.diag.Diagnostics.Diagnostic;
-import liraz.paletlang.diag.Diagnostics.Severity;
-import liraz.paletlang.gen.Generator.GeneratedFile;
+import liraz.paletlang.diagnostics.Diagnostic;
+import liraz.paletlang.diagnostics.Severity;
+import liraz.paletlang.generators.GeneratedFile;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;

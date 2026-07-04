@@ -1,8 +1,7 @@
 package liraz.paletlang.semantic;
 
 import liraz.paletlang.diagnostics.Diagnostics;
-import liraz.paletlang.model.DesignSystem;
-import liraz.paletlang.model.DesignSystem.*;
+import liraz.paletlang.model.*;
 import liraz.paletlang.util.HexColor;
 
 import java.util.*;

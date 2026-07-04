@@ -1,7 +1,7 @@
 package liraz.paletlang.generators;
 
 import liraz.paletlang.model.DesignSystem;
-import liraz.paletlang.model.DesignSystem.Target;
+import liraz.paletlang.model.Target;
 
 import java.util.List;
 

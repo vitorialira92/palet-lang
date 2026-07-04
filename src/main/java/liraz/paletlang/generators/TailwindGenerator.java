@@ -1,7 +1,6 @@
 package liraz.paletlang.generators;
 
-import liraz.paletlang.model.DesignSystem;
-import liraz.paletlang.model.DesignSystem.*;
+import liraz.paletlang.model.*;
 import liraz.paletlang.util.HexColor;
 import liraz.paletlang.util.Strings;
 
